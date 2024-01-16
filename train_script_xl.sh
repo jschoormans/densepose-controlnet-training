@@ -14,6 +14,6 @@ accelerate launch train_controlnet.py \
  --tracker_project_name="controlnet" \
  --enable_xformers_memory_efficient_attention \
  --checkpointing_steps=5000 \
- --validation_steps=2500 \
+ --validation_steps=1000 \
  --report_to wandb \
  --push_to_hub

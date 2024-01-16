@@ -12,4 +12,4 @@ image_dataset = image_dataset.cast_column("conditioning_image", Image())
 #%%
 
 os.chdir('data_folder/train')
-image_dataset.push_to_hub('jschoormans/humanpose_densepose')
+image_dataset.push_to_hub('jschoormans/densepose_1024')
