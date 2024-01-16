@@ -1,0 +1,19 @@
+accelerate launch train_controlnet.py \
+ --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1-base" \
+ --output_dir="model_out" \
+ --dataset_name=jschoormans/humanpose_densepose \
+ --conditioning_image_column=conditioning_image \
+ --image_column=file_name \
+ --caption_column=caption \
+ --resolution=512 \
+ --learning_rate=1e-5 \
+ --validation_image "validation_images/00988787_densepose.jpg" "validation_images/002021752_densepose.jpg" "validation_images/002162699_densepose.jpg" \
+ --validation_prompt "High-quality close-up dslr photo of man wearing a hat with trees in the background" "Girl smiling, professional dslr photograph, dark background, studio lights, high quality" "Portrait of a clown face, oil on canvas, bittersweet expression" \
+ --train_batch_size=4 \
+ --num_train_epochs=3 \
+ --tracker_project_name="controlnet" \
+ --enable_xformers_memory_efficient_attention \
+ --checkpointing_steps=5000 \
+ --validation_steps=5000 \
+ --report_to wandb \
+ --push_to_hub
