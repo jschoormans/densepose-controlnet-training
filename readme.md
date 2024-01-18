@@ -22,8 +22,11 @@ Steps for pushing the model to the hub.
     3  ./script.deb.sh 
     4  apt-get install git-lfs
     5  git lfs install
-    6  huggingface-cli login
-    7  cd controlnet-densepose-sd2-1-base/
-    8  ls
-    9  git lfs install
-   17  huggingface-cli login
+
+    pip install --upgrade huggingface_hub
+    huggingface-cli login
+
+
+Training sdxl 
+pip install accelerate
+pip install git+https://github.com/huggingface/diffusers
