@@ -30,6 +30,6 @@ Steps for pushing the model to the hub.
 Training sdxl 
 
 
-pip install accelerate
+pip install accelerate transformers xformers bitsandbytes datasets wandb
 pip install git+https://github.com/huggingface/diffusers
  ./train_script_xl.sh 

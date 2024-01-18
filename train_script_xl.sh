@@ -9,7 +9,7 @@ accelerate launch train_controlnet_sdxl.py \
  --learning_rate=1e-5 \
  --validation_image "validation_images/000988787_densepose.jpg" "validation_images/002021752_densepose.jpg" "validation_images/002162699_densepose.jpg" \
  --validation_prompt "High-quality close-up dslr photo of man doing yoga" "Girl smiling, professional dslr photograph, dark background, studio lights, high quality" "Portrait of a runner" \
- --train_batch_size=1 \
+ --train_batch_size=4 \
  --num_train_epochs=3 \
  --tracker_project_name="controlnet" \
  --enable_xformers_memory_efficient_attention \
@@ -17,10 +17,10 @@ accelerate launch train_controlnet_sdxl.py \
  --validation_steps=1000 \
  --report_to wandb \
  --push_to_hub \
- --gradient_accumulation_steps=4 \
- --gradient_checkpointing \
- --use_8bit_adam \
- --set_grads_to_none
+ # --gradient_accumulation_steps=4 \
+ # --gradient_checkpointing \
+ # --use_8bit_adam \
+ # --set_grads_to_none
 
 
 
