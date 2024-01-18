@@ -28,5 +28,8 @@ Steps for pushing the model to the hub.
 
 
 Training sdxl 
+
+
 pip install accelerate
 pip install git+https://github.com/huggingface/diffusers
+ ./train_script_xl.sh 
